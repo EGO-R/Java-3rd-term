@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        T6();
+        T4();
     }
 
         public static void T3(){
