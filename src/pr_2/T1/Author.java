@@ -1,4 +1,4 @@
-package pr_2;
+package pr_2.T1;
 
 public class Author {
     private String name;
