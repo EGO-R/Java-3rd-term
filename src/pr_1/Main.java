@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        T4();
+        T6();
     }
 
         public static void T3(){
@@ -45,11 +45,10 @@ public class Main {
     }
 
     public static void T6() {
+        double res = 0;
         for(int i = 1; i < 11; i++){
-            if(i == 1)
-                System.out.print(1);
-            else
-                System.out.print(" 1/" + i);
+            res += 1.0 / i;
+            System.out.printf("%.2f\n", res);
         }
     }
 
