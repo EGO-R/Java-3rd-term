@@ -10,7 +10,7 @@ public class Shop{
 
         System.out.println("Actions:\nadd\nremove\nfind\nend");
 
-        System.out.println("\nВыберите действие: ");
+        System.out.println("\nInput actions: ");
         String action = in.next();
         while (!action.equals("end")){
             if (action.equals("add"))
