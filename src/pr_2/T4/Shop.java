@@ -3,30 +3,32 @@ package pr_2.T4;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Shop implements ShopMethods {
+public class Shop{
     public static ArrayList<Computer> computers = new ArrayList<Computer>();
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите количество компьютеров: ");
 
-        int amount = Integer.parseInt(in.nextLine());
-        System.out.println("Вводите имена компьютеров: ");
-        for (int i = 0; i < amount; i++)
-        {
-            add_computer(in.nextLine());
+        System.out.println("Actions:\nadd\nremove\nfind\nend");
+
+        System.out.println("\nВыберите действие: ");
+        String action = in.next();
+        while (!action.equals("end")){
+            if (action.equals("add"))
+                add_computer(in.next());
+            else if (action.equals("remove"))
+                delete_computer(in.next());
+            else if (action.equals("find"))
+                find_computer(in.next());
+
+            action = in.next();
         }
 
-        System.out.print("Введите имя компьютера на удаление: ");
-        delete_computer(in.nextLine());
-
-        System.out.print("Введите имя компьютера, который нужно найти: ");
-        find_computer(in.nextLine());
     }
 
 
     public static void add_computer(String name) {
         computers.add(new Computer(name));
-        System.out.println("Компьютер \"" + name + "\" добавлен");
+        System.out.println("Computer \"" + name + "\" has been added");
     }
 
 
@@ -38,7 +40,7 @@ public class Shop implements ShopMethods {
             {
                 computers.remove(computer);
                 i--;
-                System.out.println("Компьютер \"" + name + "\" удалён");
+                System.out.println("Computer \"" + name + "\" has been removed");
             }
         }
 
