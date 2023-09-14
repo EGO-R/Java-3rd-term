@@ -1,10 +1,11 @@
 package pr_1;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        T6();
+        T7();
     }
 
         public static void T3(){
@@ -54,14 +55,14 @@ public class Main {
 
     public static void T7(){
         Scanner in = new Scanner(System.in);
-        int num = in.nextInt();
+        BigInteger num = in.nextBigInteger();
         System.out.println(factorial(num));
     }
 
-    public static int factorial(int num){
-        int res = 1;
-        for(int i = 1; i <= num; i++)
-            res *= i;
+    public static BigInteger factorial(BigInteger num){
+        BigInteger res = BigInteger.valueOf(1);
+        for(BigInteger i = BigInteger.valueOf(1); i.compareTo(num) <= 0; i = i.add(BigInteger.valueOf(1)))
+            res = res.multiply(i);
         return res;
     }
 }
