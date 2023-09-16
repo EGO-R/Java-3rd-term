@@ -23,6 +23,21 @@ public class Matrix {
         }
     }
 
+    public Matrix(int n, int m, ArrayList<Integer> nums){
+        this.n = n;
+        this.m = m;
+
+        for (int i = 0; i < n; i++){
+            ArrayList<Integer> temp = new ArrayList<>();
+
+            for (int j = 0; j < m; j++)
+                temp.add(nums.get(i*m + j));
+
+            mas.add(temp);
+        }
+    }
+
+
     public void print(){
         for (int i = 0; i < n; i++){
             for (int j = 0; j < m; j++)
@@ -36,12 +51,26 @@ public class Matrix {
         if (this.n != matrix.n || this.m != matrix.m)
             return null;
 
+        ArrayList<Integer> temp = new ArrayList<>();
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++)
-                this.mas.get(i).set(j, this.mas.get(i).get(j) + matrix.mas.get(i).get(j));
+                temp.add(this.mas.get(i).get(j) + matrix.mas.get(i).get(j));
         }
 
-        return this;
+        return new Matrix(n, m, temp);
     }
 
+
+    public Matrix mult(int num){
+        ArrayList<Integer> temp = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++)
+                temp.add(this.mas.get(i).get(j) * num);
+        }
+
+        System.out.println(temp);
+        return new Matrix(n, m, temp);
+    }
 }

@@ -7,6 +7,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine()), m = Integer.parseInt(scanner.nextLine());
         Matrix matrix = new Matrix(n, m);
+
+        Matrix test = matrix.mult(2);
         matrix.print();
+        test.print();
     }
 }
