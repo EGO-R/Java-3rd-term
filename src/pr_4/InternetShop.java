@@ -41,13 +41,5 @@ public class InternetShop {
             }
             else if (catalogue.equals("корзина")) System.out.println(bin.toString());
         }
-        /*
-        Catalogue choose = new Cat;
-        System.out.println(choose.getTitle());
-
-        while (!catalogue.equals("электроника") && !catalogue.equals("игрушки"))
-            catalogue = scanner.nextLine();
-        if ()
-        */
     }
 }
