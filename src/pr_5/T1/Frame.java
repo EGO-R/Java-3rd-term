@@ -1,4 +1,4 @@
-package pr_5;
+package pr_5.T1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,7 @@ public class Frame extends JFrame {
     public int MadridScore = 0;
     public JLabel score = new JLabel("Result: 0 X 0", JLabel.CENTER);
     public JLabel scorer = new JLabel("Last Scorer: N/A", JLabel.LEFT);
-    public JLabel winner = new JLabel("Winner: DRAW", JLabel.RIGHT);
+    public JLabel winner = new JLabel("Winner: DRAW", JLabel.LEFT);
 
     public Frame(){
         super("Football");
@@ -45,9 +45,8 @@ public class Frame extends JFrame {
         });
 
         Container container = super.getContentPane();
-        container.setLayout(new GridLayout(3, 3, 2, 2));
+        container.setLayout(new GridLayout(5, 1, 2, 5));
 
-        container.add();
         container.add(score);
         container.add(scorer);
         container.add(winner);
