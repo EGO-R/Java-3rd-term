@@ -4,12 +4,9 @@ public class Student {
     private String name, surname, specialization, group;
     private int year, gpa;
 
-    public Student(String name, String surname, String specialization, String group, int year, int gpa) {
+    public Student(String name, String group, int gpa) {
         this.name = name;
-        this.surname = surname;
-        this.specialization = specialization;
         this.group = group;
-        this.year = year;
         this.gpa = gpa;
     }
 
@@ -29,21 +26,6 @@ public class Student {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
 
     public String getGroup() {
         return group;
@@ -53,22 +35,12 @@ public class Student {
         this.group = group;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
 
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", specialization='" + specialization + '\'' +
                 ", group='" + group + '\'' +
-                ", year=" + year +
                 ", gpa=" + gpa +
                 '}';
     }

@@ -13,26 +13,19 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         int len = scanner.nextInt();
         iDNumber = new Student[len];
 
-        String name, surname, specialization, group;
-        int year, gpa;
+        String name, group;
+        int gpa;
         for (int i = 0; i < len; ++i) {
             System.out.printf("Student: %d%n", i + 1);
 
             System.out.print("Enter name: ");
             name = scanner.next();
-            System.out.print("Enter surname: ");
-            surname = scanner.next();
-            System.out.print("Enter specialization: ");
-            specialization = scanner.next();
             System.out.print("Enter group: ");
             group = scanner.next();
-
-            System.out.print("Enter year: ");
-            year = scanner.nextInt();
             System.out.print("Enter GPA: ");
             gpa = scanner.nextInt();
 
-            iDNumber[i] = new Student(name, surname, specialization, group, year, gpa);
+            iDNumber[i] = new Student(name, group, gpa);
         }
     }
 
@@ -97,7 +90,7 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         int leftIndex = 0, rightIndex = 0, arrayIndex = 0;
 
         while (leftIndex < left.length && rightIndex < right.length) {
-            if (compareGroup(left[leftIndex], (right[rightIndex])) <= 0) {
+            if (compare(left[leftIndex], (right[rightIndex])) <= 0) {
                 array[arrayIndex++] = left[leftIndex++];
             } else {
                 array[arrayIndex++] = right[rightIndex++];
