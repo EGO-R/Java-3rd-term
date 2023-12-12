@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 public class T4 {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Calculator::new);
+//        SwingUtilities.invokeLater(Calculator::new);
+        new Calculator();
     }
 }
